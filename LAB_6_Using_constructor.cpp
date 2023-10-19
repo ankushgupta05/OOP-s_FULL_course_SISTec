@@ -48,6 +48,7 @@ int main()
         cout << "Enter publication year :";
         cin >> n;
         Models_Book m1(s1, s2, n);
+        m1.putdata();
         cout << "\n";
     }
 
