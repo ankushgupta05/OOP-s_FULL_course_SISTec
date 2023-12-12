@@ -7,33 +7,46 @@ int main()
 {
     string str1, str2;
     int count = 0;
-    str2 = "aeiouAEIOUA";
+    str2 = "aeiouAEIOU";
     getline(cin, str1);
+    // cout << str1.length() << endl;
+    // cout << str2.length() << endl;
     try
     {
-        for (int j = 0; j = str2.length() - 1; j++){
-            for (int i = 0; i < str1.length() - 1; i++)
+        for (int j = 0; j < str2.length(); j++)
+        {
+            // cout << "aids";
+            // cout << j << " = " << str2[j] << endl;
+            for (int i = 0; i < str1.length(); i++)
             {
+
                 if (str2[j] == str1[i])
                 {
                     count = 1;
+                    // cout << "my name";
+                    break;
                 }
+            }
+            if (count == 1)
+            {
+                break;
             }
         }
 
-        if (count == 0)
+        if (count == 1)
+
         {
-            throw "Good_string";
+            cout << "The Vowells are Present in Your string : " << str1 << endl;
         }
         else
         {
-            cout << "The Vowells are Present in Your string : " << str1 << endl;
+            throw "Good string";
         }
     }
     catch (char const *str1)
     {
         cout << str1 << endl;
     }
-    cout << "Throw successfully Execcute " << endl;
+    cout << "Program successfully Execcute " << endl;
     return 0;
 }
